@@ -13,6 +13,22 @@ export default function HomeScreen() {
           Ask Disaster Assistant
         </Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        className="bg-emergency p-5 rounded-xl mb-4"
+        onPress={() => router.push("checklist")}
+      >
+        <Text className="text-white text-center text-lg font-bold">
+          Emergency Checklist
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        className="bg-danger p-5 rounded-xl mb-4"
+        onPress={() => router.push("sos")}
+      >
+        <Text className="text-white text-center text-lg font-bold">
+          Send SOS via SMS
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }
