@@ -52,8 +52,18 @@ I'm here to help you stay safe during emergencies in the Philippines.
 
   const getAnswer = async (userInput) => {
     // Detect intent
-    const intent = detectIntent(userInput);
+    let intent = detectIntent(userInput);
     console.log('Intent:', intent);
+    console.log('Detected Disaster Type:', intent.extractedData?.disasterType);
+    
+    // Check if user asks for hotlines in context of disaster info
+    const hotlineKeywords = ['hotline', 'contact', 'call', 'phone', 'numero', 'tawag'];
+    const hasHotlineRequest = hotlineKeywords.some(kw => userInput.toLowerCase().includes(kw));
+    
+    if (hasHotlineRequest && intent.extractedData?.disasterType && intent.intent === 'hazard_search') {
+      // Override intent to hotline_request if user asking for hotlines during disaster discussion
+      intent.intent = 'hotline_request';
+    }
     
     // Handle based on intent
     if (intent.intent === "sos_request") {
@@ -120,12 +130,42 @@ I'm here to help you stay safe during emergencies in the Philippines.
     }
     
     else if (intent.intent === "hotline_request") {
-      const criticalHotlines = emergencyHotlines.filter(h => 
-        h.category === 'emergency' || h.category === 'medical_rescue' || h.category === 'disaster'
-      ).slice(0, 8);
+      // Check if user mentioned a specific disaster
+      const disasterType = intent.extractedData?.disasterType;
       
-      return `📞 **EMERGENCY HOTLINES - PHILIPPINES**\n\n` +
-             criticalHotlines.map(h => `• **${h.serviceName}**: ${h.phoneNumber}`).join('\n') +
+      // Map disasters to relevant hotline categories
+      const disasterHotlineMap = {
+        'flood': ['emergency', 'disaster', 'medical_rescue'],
+        'earthquake': ['emergency', 'disaster', 'medical_rescue'],
+        'typhoon': ['emergency', 'disaster'],
+        'fire (urban)': ['emergency', 'fire', 'medical_rescue'],
+        'volcanic eruption': ['emergency', 'disaster'],
+        'tsunami': ['emergency', 'disaster'],
+        'landslide': ['emergency', 'disaster'],
+        'drought': ['disaster'],
+        'thunderstorm': ['emergency', 'disaster'],
+        'storm surge': ['emergency', 'disaster']
+      };
+      
+      let relevantHotlines;
+      let disasterLabel = '';
+      
+      if (disasterType && disasterHotlineMap[disasterType]) {
+        // Filter hotlines by disaster-specific categories
+        const relevantCategories = disasterHotlineMap[disasterType];
+        relevantHotlines = emergencyHotlines.filter(h => 
+          relevantCategories.includes(h.category)
+        ).slice(0, 8);
+        disasterLabel = ` FOR ${disasterType.toUpperCase()}`;
+      } else {
+        // Generic hotlines
+        relevantHotlines = emergencyHotlines.filter(h => 
+          h.category === 'emergency' || h.category === 'medical_rescue' || h.category === 'disaster'
+        ).slice(0, 8);
+      }
+      
+      return `📞 **EMERGENCY HOTLINES${disasterLabel} - PHILIPPINES**\n\n` +
+             relevantHotlines.map(h => `• **${h.serviceName}**: ${h.phoneNumber}\n   📝 ${h.description}`).join('\n\n') +
              `\n\n💡 **Save these numbers in your phone now!**\n\n📱 **Tip:** Even without signal, keep these numbers saved for when service returns.`;
     }
     

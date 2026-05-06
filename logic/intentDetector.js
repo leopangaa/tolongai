@@ -140,8 +140,8 @@ function extractContextData(message, intent) {
     timestamp: new Date().toISOString()
   };
 
-  // Extract disaster type if hazard search (matching your disasterKnowledge dataset)
-  if (intent === 'hazard_search') {
+  // Extract disaster type if hazard search or hotline request (matching your disasterKnowledge dataset)
+  if (intent === 'hazard_search' || intent === 'hotline_request') {
     const hazardKeywords = [
       // Match your exact disaster types
       { type: 'typhoon', keywords: ['bagyo', 'typhoon', 'signal', 'hangin'] },
