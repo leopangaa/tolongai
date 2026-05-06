@@ -13,38 +13,38 @@ export default function AssistantScreen() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      text: `**Welcome to your Disaster Preparedness Assistant!**
+      text: `Welcome to your Disaster Preparedness Assistant!
 
 I'm here to help you stay safe during emergencies in the Philippines.
 
-💡 **Try asking me:**
+💡 Try asking me:
 
-🌊 **Disaster Information**
+🌊 Disaster Information
 • "What to do during a flood?"
 • "How to prepare for an earthquake?"
 • "Signs of a typhoon"
 • "What is storm surge?"
 
-📋 **Preparedness**
+📋 Preparedness
 • "Give me a disaster checklist"
 • "What should I put in my go bag?"
 • "How to prepare for a volcanic eruption"
 
-📞 **Emergency Contacts**
+📞 Emergency Contacts
 • "Show me emergency hotlines"
 • "NDRRMC number"
 • "Red Cross contact"
 
-📍 **Evacuation Centers**
+📍 Evacuation Centers
 • "Find evacuation centers near me"
 • "Where to go during a tsunami"
 
-🚨 **Emergency**
+🚨 Emergency
 • "Tulong!" or "Help!" - Send SOS
 
 ---
 
-*Type your question below and I'll help you stay prepared!*`
+Type your question below and I'll help you stay prepared!`
     }
   ]);
   const [loading, setLoading] = useState(false);
@@ -74,7 +74,16 @@ I'm here to help you stay safe during emergencies in the Philippines.
         'Immediate assistance needed',
         { includeNumbers: true, tagalogMode: false }
       );
-      return `🚨 **⚠️ EMERGENCY ALERT! ⚠️** 🚨\n\n${sosMessage.smsText}\n\n📞 **Call these numbers NOW:**\n• 911 - National Emergency\n• 143 - Philippine Red Cross\n• 117 - Police / Fire\n\nStay calm. Help is on the way.`;
+      return `🚨 ⚠️ EMERGENCY ALERT! ⚠️ 🚨
+
+${sosMessage.smsText}
+
+📞 Call these numbers NOW:
+• 911 - National Emergency
+• 143 - Philippine Red Cross
+• 117 - Police / Fire
+
+Stay calm. Help is on the way.`;
     }
     
     else if (intent.intent === "hazard_search") {
@@ -108,25 +117,53 @@ I'm here to help you stay safe during emergencies in the Philippines.
         else if (disasterName === 'landslide') disasterName = '⛰️ LANDSLIDE';
         else disasterName = `⚠️ ${disasterName.toUpperCase()}`;
         
-        return `${disasterName}\n\n` +
-               `🔔 **Warning Signs:**\n${d.warningSigns.map(s => `   • ${s}`).join('\n')}\n\n` +
-               `✅ **How to Prepare:**\n${d.prepActions.map(a => `   • ${a}`).join('\n')}\n\n` +
-               `🚨 **During the Event:**\n${d.duringActions.map(a => `   • ${a}`).join('\n')}\n\n` +
-               `🏠 **Afterward:**\n${d.afterActions.map(a => `   • ${a}`).join('\n')}`;
+        return `${disasterName}
+
+🔔 Warning Signs:
+${d.warningSigns.map(s => `   • ${s}`).join('\n')}
+
+✅ How to Prepare:
+${d.prepActions.map(a => `   • ${a}`).join('\n')}
+
+🚨 During the Event:
+${d.duringActions.map(a => `   • ${a}`).join('\n')}
+
+🏠 Afterward:
+${d.afterActions.map(a => `   • ${a}`).join('\n')}`;
       } else {
-        return `❓ I don't have information about "${searchQuery}" yet.\n\n📚 **Try asking about:**\n• flood / baha\n• earthquake / lindol\n• typhoon / bagyo\n• fire / sunog\n• volcanic eruption / bulkan\n• tsunami / alon\n• landslide / pagguho`;
+        return `❓ I don't have information about "${searchQuery}" yet.
+
+📚 Try asking about:
+• flood / baha
+• earthquake / lindol
+• typhoon / bagyo
+• fire / sunog
+• volcanic eruption / bulkan
+• tsunami / alon
+• landslide / pagguho`;
       }
     }
     
     else if (intent.intent === "checklist_generation") {
-      const checklist = generateChecklist("typhoon", {});
+      // Use detected disaster type or default to general preparedness
+      const disasterType = intent.extractedData?.disasterType || 'typhoon';
+      const checklist = generateChecklist(disasterType, {});
       const critical = checklist.filter(item => item.priority === 1);
       const important = checklist.filter(item => item.priority === 2);
       
-      return `📋 **EMERGENCY PREPAREDNESS CHECKLIST**\n\n` +
-             `🔴 **DO THESE FIRST (Critical)**\n${critical.slice(0, 6).map(item => `   • ${item.item}`).join('\n')}\n\n` +
-             `🟡 **Important Preparations**\n${important.slice(0, 5).map(item => `   • ${item.item}`).join('\n')}\n\n` +
-             `💡 **Pro Tip:** Start with the critical items. A "Go Bag" ready now saves lives later!`;
+      const disasterLabel = (disasterType && disasterType !== 'undefined' && disasterType !== '') 
+        ? ` FOR ${disasterType.toUpperCase()}` 
+        : '';
+      
+      return `📋 EMERGENCY PREPAREDNESS CHECKLIST${disasterLabel}
+
+🔴 DO THESE FIRST (Critical)
+${critical.slice(0, 6).map(item => `   • ${item.item}`).join('\n')}
+
+🟡 Important Preparations
+${important.slice(0, 5).map(item => `   • ${item.item}`).join('\n')}
+
+💡 Pro Tip: Start with the critical items. A "Go Bag" ready now saves lives later!`;
     }
     
     else if (intent.intent === "hotline_request") {
@@ -138,7 +175,7 @@ I'm here to help you stay safe during emergencies in the Philippines.
         'flood': ['emergency', 'disaster', 'medical_rescue'],
         'earthquake': ['emergency', 'disaster', 'medical_rescue'],
         'typhoon': ['emergency', 'disaster'],
-        'fire (urban)': ['emergency', 'fire', 'medical_rescue'],
+        'fire (urban)': ['emergency', 'medical_rescue', 'law_enforcement'],
         'volcanic eruption': ['emergency', 'disaster'],
         'tsunami': ['emergency', 'disaster'],
         'landslide': ['emergency', 'disaster'],
@@ -164,9 +201,13 @@ I'm here to help you stay safe during emergencies in the Philippines.
         ).slice(0, 8);
       }
       
-      return `📞 **EMERGENCY HOTLINES${disasterLabel} - PHILIPPINES**\n\n` +
-             relevantHotlines.map(h => `• **${h.serviceName}**: ${h.phoneNumber}\n   📝 ${h.description}`).join('\n\n') +
-             `\n\n💡 **Save these numbers in your phone now!**\n\n📱 **Tip:** Even without signal, keep these numbers saved for when service returns.`;
+      return `📞 EMERGENCY HOTLINES${disasterLabel} - PHILIPPINES
+
+${relevantHotlines.map(h => `• ${h.serviceName}: ${h.phoneNumber}\n   ${h.description}`).join('\n\n')}
+
+💡 Save these numbers in your phone now!
+
+📱 Tip: Even without signal, keep these numbers saved for when service returns.`;
     }
     
     else if (intent.intent === "evacuation_center_lookup") {
@@ -187,24 +228,60 @@ I'm here to help you stay safe during emergencies in the Philippines.
         const centersToShow = relevantCenters.slice(0, 3);
         const centersInfo = centersToShow.map(center => {
           const facilities = center.facilities ? center.facilities.join(', ') : 'Standard facilities';
-          return `📍 **${center.name}**\n   📌 ${center.location.barangay}, ${center.location.city} | ${center.location.region}\n   👥 Capacity: ${center.capacity} people\n   📞 ${center.contactPhone}\n   🏗️ Facilities: ${facilities}`;
+          return `📍 ${center.name}
+   📌 ${center.location.barangay}, ${center.location.city} | ${center.location.region}
+   👥 Capacity: ${center.capacity} people
+   📞 ${center.contactPhone}
+   🏗️ Facilities: ${facilities}`;
         }).join('\n\n');
         
         const locationText = location ? ` near ${location}` : ' available in the database';
-        return `🏢 **EVACUATION CENTERS${locationText.toUpperCase()}**\n\n${centersInfo}\n\n🏃 **Remember:** Know your route before disaster strikes!`;
+        return `🏢 EVACUATION CENTERS${locationText.toUpperCase()}
+
+${centersInfo}
+
+🏃 Remember: Know your route before disaster strikes!`;
       } else {
-        return `🏢 **EVACUATION CENTERS**\n\n❌ No evacuation centers found${location ? ` near ${location}` : ''}.\n\n📍 **Try searching for centers in:**\n• City (e.g., "Quezon City", "Manila", "Makati")\n• Barangay (e.g., "Bagumbayan", "Balangiga")\n• Region (e.g., "NCR")\n\nExample: "Evacuation centers in Manila" or "Show evacuation shelters in QC"`;
+        return `🏢 EVACUATION CENTERS
+
+❌ No evacuation centers found${location ? ` near ${location}` : ''}.
+
+📍 Try searching for centers in:
+• City (e.g., "Quezon City", "Manila", "Makati")
+• Barangay (e.g., "Bagumbayan", "Balangiga")
+• Region (e.g., "NCR")
+
+Example: "Evacuation centers in Manila" or "Show evacuation shelters in QC"`;
       }
     }
     
     else {
-      return `💬 **Need help? Here's what I can do:**\n\n` +
-             `🌊 **Get Disaster Info**\n   • "What to do during a flood?"\n   • "Earthquake safety tips"\n   • "Typhoon warning signs"\n\n` +
-             `📋 **Get Prepared**\n   • "Show me a checklist"\n   • "What to put in go bag"\n   • "How to prepare for volcanic eruption"\n\n` +
-             `📞 **Find Contacts**\n   • "Emergency hotlines"\n   • "NDRRMC number"\n   • "Red Cross contact"\n\n` +
-             `📍 **Find Shelters**\n   • "Evacuation centers near me"\n   • "Where to go during tsunami"\n\n` +
-             `🚨 **Emergency**\n   • Type "TULONG" or "HELP" for SOS\n\n` +
-             `---\n*Ask me anything about disaster preparedness*`;
+      return `💬 Need help? Here's what I can do:
+
+🌊 Get Disaster Info
+   • "What to do during a flood?"
+   • "Earthquake safety tips"
+   • "Typhoon warning signs"
+
+📋 Get Prepared
+   • "Show me a checklist"
+   • "What to put in go bag"
+   • "How to prepare for volcanic eruption"
+
+📞 Find Contacts
+   • "Emergency hotlines"
+   • "NDRRMC number"
+   • "Red Cross contact"
+
+📍 Find Shelters
+   • "Evacuation centers near me"
+   • "Where to go during tsunami"
+
+🚨 Emergency
+   • Type "TULONG" or "HELP" for SOS
+
+---
+Ask me anything about disaster preparedness in the Philippines! 🇵🇭`;
     }
   };
 
@@ -237,20 +314,33 @@ I'm here to help you stay safe during emergencies in the Philippines.
     setMessages([
       {
         role: 'assistant',
-        text: `🇵🇭 **Welcome back!** 🌏\n\nI'm your Disaster Preparedness Assistant. Ask me about:\n• Floods, earthquakes, typhoons\n• Emergency checklists\n• Hotlines and evacuation centers\n\nType "help" anytime to see what I can do!`
+        text: `Welcome back!
+
+I'm your Disaster Preparedness Assistant. Ask me about:
+• Floods, earthquakes, typhoons
+• Emergency checklists
+• Hotlines and evacuation centers
+
+Type "help" anytime to see what I can do!`
       }
     ]);
   };
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={clearChat} style={styles.clearButton}>
+          <Text style={styles.clearButtonText}>Clear Chat</Text>
+        </TouchableOpacity>
+      </View>
+      
       <ScrollView 
         ref={scrollViewRef}
         style={styles.messagesContainer}
         contentContainerStyle={styles.messagesContent}
       >
         {messages.map((msg, index) => (
-          <View key={index} style={[styles.message, msg.role === 'user' ? styles.userMessage : styles.assistantMessage]}>
+          <View key={`msg-${index}-${msg.role}`} style={[styles.message, msg.role === 'user' ? styles.userMessage : styles.assistantMessage]}>
             <Text style={msg.role === 'user' ? styles.userText : styles.assistantText}>
               {msg.text}
             </Text>
@@ -289,6 +379,27 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f8f9fa',
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+    backgroundColor: '#fff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#e9ecef',
+  },
+  clearButton: {
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 8,
+  },
+  clearButtonText: {
+    fontSize: 14,
+    color: '#666',
+    fontWeight: '500',
   },
   messagesContainer: {
     flex: 1,

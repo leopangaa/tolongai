@@ -1,3 +1,5 @@
+import checklistRules from '../data/checklistRules.json';
+
 /**
  * Generates personalized checklist based on disaster type and user profile
  * @param {string} disasterType - Type of disaster (matches disasterKnowledge dataset)
@@ -5,279 +7,59 @@
  * @returns {Array<{item:string, category:string, priority:number, estimatedMinutes:number}>}
  */
 function generateChecklist(disasterType, userProfile = {}) {
-  const baseChecklist = [
-    {
-      item: 'Magtabi ng 1 gallon na tubig per person per day (7 days minimum)',
-      category: 'water_food',
-      priority: 1,
-      estimatedMinutes: 30
-    },
-    {
-      item: 'Magtabi ng 7-araw na pagkain (de lata, noodles, biscuits, tsokolate)',
-      category: 'water_food',
-      priority: 1,
-      estimatedMinutes: 45
-    },
-    {
-      item: 'Maghanda ng first aid kit (bandage, antiseptic, gamot sa lagnat)',
-      category: 'medical',
-      priority: 1,
-      estimatedMinutes: 20
-    },
-    {
-      item: 'Mag-imbak ng mahahalagang dokumento sa waterproof bag',
-      category: 'documents',
-      priority: 2,
-      estimatedMinutes: 25
-    },
-    {
-      item: 'Gumawa ng family emergency communication plan at meeting point',
-      category: 'communication',
-      priority: 1,
-      estimatedMinutes: 15
-    },
-    {
-      item: 'Mag-charge ng powerbank at flashlight (siguraduhing fully charged)',
-      category: 'communication',
-      priority: 1,
-      estimatedMinutes: 10
-    },
-    {
-      item: 'Magtabi ng battery-powered radio para sa PAGASA/NDRRMC updates',
-      category: 'communication',
-      priority: 1,
-      estimatedMinutes: 5
-    },
-    {
-      item: 'Maghanda ng go bag at maging handang lumikas anumang oras',
-      category: 'evacuation',
-      priority: 1,
-      estimatedMinutes: 20
+  const checklist = [];
+  const addedItems = new Set();
+
+  // Normalize disaster type
+  const normalizedDisaster = disasterType ? disasterType.toLowerCase() : 'typhoon';
+
+  // Process all rules from checklistRules.json
+  for (const rule of checklistRules) {
+    let shouldAdd = false;
+    const triggerCondition = rule.triggerCondition || {};
+
+    // Check if this is a base item (no trigger condition)
+    if (Object.keys(triggerCondition).length === 0) {
+      shouldAdd = true;
     }
-  ];
+    // Check if this item matches the disaster type
+    else if (triggerCondition.disasterTypes) {
+      shouldAdd = triggerCondition.disasterTypes.some(d => 
+        d.toLowerCase() === normalizedDisaster
+      );
+    }
+    // Check if this item matches user profile
+    else if (triggerCondition.userProfile) {
+      const profile = triggerCondition.userProfile;
+      if (profile.hasElderly && userProfile.hasElderly) shouldAdd = true;
+      if (profile.hasInfants && userProfile.hasInfants) shouldAdd = true;
+      if (profile.hasPets && userProfile.hasPets) shouldAdd = true;
+      if (profile.hasMedicalNeeds && userProfile.hasMedicalNeeds) shouldAdd = true;
+      if (profile.livesInFloodZone && userProfile.livesInFloodZone) shouldAdd = true;
+      if (profile.livesInCoastalArea && userProfile.livesInCoastalArea) shouldAdd = true;
+      if (profile.livesNearVolcano && userProfile.livesNearVolcano) shouldAdd = true;
+      if (profile.livesOnSteepSlope && userProfile.livesOnSteepSlope) shouldAdd = true;
+    }
 
-  // Conditional items based on user profile
-  const conditionalChecklist = [];
-
-  if (userProfile.hasPets) {
-    conditionalChecklist.push(
-      {
-        item: 'Maghanda ng pet carrier, leash, at diaper para sa alaga',
-        category: 'pets',
-        priority: 2,
-        estimatedMinutes: 15
-      },
-      {
-        item: 'Magtabi ng 7-araw na pagkain at tubig ng alaga',
-        category: 'pets',
-        priority: 2,
-        estimatedMinutes: 10
-      },
-      {
-        item: 'Magtabi ng recent photo at vaccination records ng alaga',
-        category: 'pets',
-        priority: 2,
-        estimatedMinutes: 5
-      }
-    );
-  }
-
-  if (userProfile.hasElderly) {
-    conditionalChecklist.push(
-      {
-        item: 'Magtabi ng 30-araw supply ng reseta at maintenance medicines',
-        category: 'medical',
-        priority: 1,
-        estimatedMinutes: 20
-      },
-      {
-        item: 'Maghanda ng mobility aids (walker, cane, wheelchair) para sa paglikas',
-        category: 'special_needs',
-        priority: 1,
-        estimatedMinutes: 15
-      },
-      {
-        item: 'Magdala ng medical records at doctor\'s contact numbers',
-        category: 'documents',
-        priority: 1,
-        estimatedMinutes: 15
-      }
-    );
-  }
-
-  if (userProfile.hasInfants) {
-    conditionalChecklist.push(
-      {
-        item: 'Magtabi ng 30-araw supply ng formula, diapers, at baby food',
-        category: 'water_food',
-        priority: 1,
-        estimatedMinutes: 45
-      },
-      {
-        item: 'Maghanda ng baby first aid kit (paracetamol drops, ointment, thermometer)',
-        category: 'medical',
-        priority: 1,
-        estimatedMinutes: 20
-      },
-      {
-        item: 'Magtabi ng vaccination records at pediatrician contact number',
-        category: 'documents',
-        priority: 1,
-        estimatedMinutes: 10
-      }
-    );
-  }
-
-  if (userProfile.hasMedicalNeeds) {
-    conditionalChecklist.push(
-      {
-        item: 'Magtabi ng 30-araw supply ng lahat ng maintenance medications',
-        category: 'medical',
-        priority: 1,
-        estimatedMinutes: 15
-      },
-      {
-        item: 'Maghanda ng medical equipment (inhaler, insulin, nebulizer)',
-        category: 'medical',
-        priority: 1,
-        estimatedMinutes: 10
-      },
-      {
-        item: 'Magdala ng medical alert card at emergency contact numbers',
-        category: 'documents',
-        priority: 1,
-        estimatedMinutes: 10
-      }
-    );
-  }
-
-  if (userProfile.livesInFloodZone) {
-    conditionalChecklist.push(
-      {
-        item: 'Alamin ang evacuation routes at mataas na lugar mula sa barangay',
-        category: 'evacuation',
-        priority: 1,
-        estimatedMinutes: 20
-      },
-      {
-        item: 'Hanapin ang pinakamalapit na evacuation center gamit ang app',
-        category: 'evacuation',
-        priority: 1,
-        estimatedMinutes: 15
-      },
-      {
-        item: 'Ilipat ang mahahalagang gamit sa second floor o mataas na lugar',
-        category: 'shelter',
-        priority: 1,
-        estimatedMinutes: 60
-      },
-      {
-        item: 'Makipag-coordinate sa barangay para sa flood early warning system',
-        category: 'communication',
-        priority: 2,
-        estimatedMinutes: 15
-      }
-    );
-  }
-
-  if (userProfile.livesInCoastalArea) {
-    conditionalChecklist.push(
-      {
-        item: 'Alamin ang tsunami evacuation route papunta sa mataas na lugar (10m+ elevation)',
-        category: 'evacuation',
-        priority: 1,
-        estimatedMinutes: 30
-      },
-      {
-        item: 'Siguraduhing alam ng pamilya ang storm surge at tsunami warning signals',
-        category: 'communication',
-        priority: 1,
-        estimatedMinutes: 20
-      },
-      {
-        item: 'I-practice ang coastal evacuation drill tuwing may malakas na lindol',
-        category: 'evacuation',
-        priority: 2,
-        estimatedMinutes: 25
-      }
-    );
-  }
-
-  if (userProfile.livesNearVolcano) {
-    conditionalChecklist.push(
-      {
-        item: 'Magtabi ng N95 masks at goggles para sa ashfall (PHIVOLCS alert)',
-        category: 'medical',
-        priority: 1,
-        estimatedMinutes: 15
-      },
-      {
-        item: 'Alamin ang PHIVOLCS alert levels at evacuation procedures para sa bulkan',
-        category: 'evacuation',
-        priority: 1,
-        estimatedMinutes: 20
-      },
-      {
-        item: 'Maghanda ng go bag na may mask, salamin, at close-fitting clothes',
-        category: 'evacuation',
-        priority: 1,
-        estimatedMinutes: 15
-      }
-    );
-  }
-
-  if (userProfile.livesOnSteepSlope) {
-    conditionalChecklist.push(
-      {
-        item: 'Alamin ang landslide signs (ground cracks, tilting trees, seepage)',
-        category: 'evacuation',
-        priority: 1,
-        estimatedMinutes: 15
-      },
-      {
-        item: 'Makipag-coordinate sa barangay para sa landslide monitoring',
-        category: 'communication',
-        priority: 1,
-        estimatedMinutes: 20
-      },
-      {
-        item: 'Iwasang magtayo ng bahay sa steep slopes o magpalit ng location kung delikado',
-        category: 'shelter',
-        priority: 2,
-        estimatedMinutes: 120
-      }
-    );
-  }
-
-  // Disaster-specific items (now matching PH disaster types)
-  const disasterSpecificItems = getDisasterSpecificItems(
-    disasterType,
-    userProfile
-  );
-
-  // Combine all checklists and sort by priority
-  const fullChecklist = [
-    ...baseChecklist,
-    ...conditionalChecklist,
-    ...disasterSpecificItems
-  ];
-
-  // Remove duplicates by item text (optional but recommended)
-  const uniqueChecklist = [];
-  const itemSet = new Set();
-  for (const item of fullChecklist) {
-    if (!itemSet.has(item.item)) {
-      itemSet.add(item.item);
-      uniqueChecklist.push(item);
+    // Add item if it matches and hasn't been added already
+    if (shouldAdd && !addedItems.has(rule.checklistItem)) {
+      checklist.push({
+        item: rule.checklistItem,
+        category: rule.category,
+        priority: rule.priority,
+        estimatedMinutes: rule.estimatedMinutes
+      });
+      addedItems.add(rule.checklistItem);
     }
   }
 
-  uniqueChecklist.sort((a, b) => a.priority - b.priority);
-  return uniqueChecklist;
+  // Sort by priority
+  checklist.sort((a, b) => a.priority - b.priority);
+  return checklist;
 }
 
 /**
- * Get disaster-specific checklist items for Philippines disasters
+ * Get disaster-specific checklist items for Philippines disasters (Hardcoded Fallback)
  * @param {string} disasterType
  * @param {object} userProfile
  * @returns {Array}
@@ -291,25 +73,25 @@ function getDisasterSpecificItems(disasterType, userProfile) {
     case 'bagyo':
       items.push(
         {
-          item: 'Mag-charge ng lahat ng powerbank at mobile devices bago dumating ang Signal #1',
+          item: 'Charge all powerbanks and mobile devices before Signal #1 arrives',
           category: 'communication',
           priority: 1,
           estimatedMinutes: 15
         },
         {
-          item: 'I-secure ang mga outdoor items (plants, bubong, signages) laban sa hangin',
+          item: 'Secure outdoor items (plants, roofs, signs) against strong winds',
           category: 'shelter',
           priority: 2,
           estimatedMinutes: 45
         },
         {
-          item: 'Magtabi ng plywood, martilyo, at duct tape para sa bintana (kung Signal #3 pataas)',
+          item: 'Prepare plywood, hammer, and duct tape for windows (if Signal #3 or higher)',
           category: 'shelter',
           priority: 2,
           estimatedMinutes: 60
         },
         {
-          item: 'Monitor PAGASA typhoon updates sa radyo kada 2 oras',
+          item: 'Monitor PAGASA typhoon updates on radio every 2 hours',
           category: 'communication',
           priority: 2,
           estimatedMinutes: 5
@@ -321,19 +103,19 @@ function getDisasterSpecificItems(disasterType, userProfile) {
     case 'baha':
       items.push(
         {
-          item: 'Linisan ang drainage at gutter ng bahay para bumilis ang daloy ng tubig',
+          item: 'Clean house drainage and gutters to improve water flow',
           category: 'shelter',
           priority: 2,
           estimatedMinutes: 45
         },
         {
-          item: 'Magtabi ng mga mahahalagang gamit sa mataas na lugar (second floor)',
+          item: 'Store important belongings in high places (second floor)',
           category: 'shelter',
           priority: 1,
           estimatedMinutes: 60
         },
         {
-          item: 'Maghanda ng sako ng buhangin (sandbags) para i-block ang pinto',
+          item: 'Prepare sandbags to block doorways',
           category: 'shelter',
           priority: 2,
           estimatedMinutes: 30
@@ -345,25 +127,25 @@ function getDisasterSpecificItems(disasterType, userProfile) {
     case 'lindol':
       items.push(
         {
-          item: 'I-secure ang mabibigat na furniture (cabinet, shelves, TV) sa pader',
+          item: 'Secure heavy furniture (cabinets, shelves, TV) to the wall',
           category: 'shelter',
           priority: 2,
           estimatedMinutes: 60
         },
         {
-          item: 'Alamin ang drop, cover, and hold positions sa bawat kwarto',
+          item: 'Identify drop, cover, and hold positions in every room',
           category: 'shelter',
           priority: 1,
           estimatedMinutes: 15
         },
         {
-          item: 'Magsagawa ng earthquake drill kasama ang pamilya (buwanan)',
+          item: 'Practice earthquake drill with family (monthly)',
           category: 'evacuation',
           priority: 2,
           estimatedMinutes: 20
         },
         {
-          item: 'Magtabi ng flashlight sa tabi ng kama at sa bawat kuwarto',
+          item: 'Keep a flashlight next to your bed and in every room',
           category: 'communication',
           priority: 1,
           estimatedMinutes: 10
@@ -376,25 +158,25 @@ function getDisasterSpecificItems(disasterType, userProfile) {
     case 'bulkan':
       items.push(
         {
-          item: 'Magtabi ng N95 mask at goggles para sa ashfall (1 per person)',
+          item: 'Stock N95 masks and goggles for ashfall (1 per person)',
           category: 'medical',
           priority: 1,
           estimatedMinutes: 15
         },
         {
-          item: 'Alamin ang PHIVOLCS alert levels at angkop na evacuation procedures',
+          item: 'Know PHIVOLCS alert levels and appropriate evacuation procedures',
           category: 'evacuation',
           priority: 1,
           estimatedMinutes: 20
         },
         {
-          item: 'Siguraduhing sarado ang lahat ng bintana at pinto para hindi pumasok ang abo',
+          item: 'Ensure all windows and doors are closed to prevent ash from entering',
           category: 'shelter',
           priority: 2,
           estimatedMinutes: 10
         },
         {
-          item: 'Magtabi ng extra tubig (maaaring kontaminado ang supply ng ashfall)',
+          item: 'Store extra water (ashfall may contaminate water supply)',
           category: 'water_food',
           priority: 1,
           estimatedMinutes: 30
@@ -406,19 +188,19 @@ function getDisasterSpecificItems(disasterType, userProfile) {
     case 'pagguho':
       items.push(
         {
-          item: 'Alamin ang early warning signs: ground cracks, tilting trees, water seepage',
+          item: 'Learn early warning signs: ground cracks, tilting trees, water seepage',
           category: 'evacuation',
           priority: 1,
           estimatedMinutes: 15
         },
         {
-          item: 'Makipag-coordinate sa barangay para sa landslide monitoring at evacuation plan',
+          item: 'Coordinate with barangay for landslide monitoring and evacuation plan',
           category: 'communication',
           priority: 1,
           estimatedMinutes: 20
         },
         {
-          item: 'Iwasang magtayo ng bahay sa steep slopes (umilag sa "no-build zones")',
+          item: 'Avoid building houses on steep slopes (stay away from "no-build zones")',
           category: 'shelter',
           priority: 2,
           estimatedMinutes: 120
@@ -430,19 +212,19 @@ function getDisasterSpecificItems(disasterType, userProfile) {
     case 'alon':
       items.push(
         {
-          item: 'Alamin at mag-practice ng tsunami evacuation route papunta sa high ground (10m+)',
+          item: 'Learn and practice tsunami evacuation route to high ground (10m+ elevation)',
           category: 'evacuation',
           priority: 1,
           estimatedMinutes: 30
         },
         {
-          item: 'Kapag may malakas na lindol sa dagat, lumikas agad — wag maghintay ng warning',
+          item: 'If there is a strong earthquake near the sea, evacuate immediately — don\'t wait for a warning',
           category: 'evacuation',
           priority: 1,
           estimatedMinutes: 5
         },
         {
-          item: 'Iwasang pumunta sa beach para manood — delikado ang sudden wave rise',
+          item: 'Do not go to the beach to watch — sudden wave rise is dangerous',
           category: 'evacuation',
           priority: 2,
           estimatedMinutes: 1
@@ -454,25 +236,25 @@ function getDisasterSpecificItems(disasterType, userProfile) {
     case 'sunog':
       items.push(
         {
-          item: 'Gumawa ng 2 evacuation routes mula sa bahay (isang pangunahin at isang alternate)',
+          item: 'Create 2 evacuation routes from home (one primary and one alternate)',
           category: 'evacuation',
           priority: 1,
           estimatedMinutes: 20
         },
         {
-          item: 'Magsagawa ng fire drill kasama ang pamilya tuwing 6 na buwan',
+          item: 'Practice fire drill with family every 6 months',
           category: 'evacuation',
           priority: 2,
           estimatedMinutes: 15
         },
         {
-          item: 'Maglagay ng fire extinguisher sa accesible na lugar (kusina, garahe)',
+          item: 'Place fire extinguisher in accessible area (kitchen, garage)',
           category: 'shelter',
           priority: 2,
           estimatedMinutes: 10
         },
         {
-          item: 'Siguraduhing gumagana ang smoke detector at may bagong battery',
+          item: 'Ensure smoke detector works and has fresh batteries',
           category: 'shelter',
           priority: 2,
           estimatedMinutes: 5
@@ -484,25 +266,25 @@ function getDisasterSpecificItems(disasterType, userProfile) {
     case 'tagtuyot':
       items.push(
         {
-          item: 'Mag-imbak ng tubig sa malalaking container (drum, timba, tangke)',
+          item: 'Store water in large containers (drums, buckets, tanks)',
           category: 'water_food',
           priority: 1,
           estimatedMinutes: 60
         },
         {
-          item: 'Bawasan ang paggamit ng tubig (reuse, recycle, conserve)',
+          item: 'Reduce water usage (reuse, recycle, conserve)',
           category: 'water_food',
           priority: 2,
           estimatedMinutes: 5
         },
         {
-          item: 'Alamin ang water rationing schedule mula sa LGU/barangay',
+          item: 'Learn water rationing schedule from LGU/barangay',
           category: 'communication',
           priority: 2,
           estimatedMinutes: 15
         },
         {
-          item: 'Maghanda ng electrolyte drinks para maiwasan ang dehydration',
+          item: 'Prepare electrolyte drinks to prevent dehydration',
           category: 'medical',
           priority: 2,
           estimatedMinutes: 20
@@ -514,19 +296,19 @@ function getDisasterSpecificItems(disasterType, userProfile) {
     case 'kidlat':
       items.push(
         {
-          item: 'I-unplug ang mga electronic appliances bago dumating ang bagyo',
+          item: 'Unplug electronic appliances before the storm arrives',
           category: 'shelter',
           priority: 2,
           estimatedMinutes: 10
         },
         {
-          item: 'Manatili sa loob ng bahay at lumayo sa bintana habang kumukulog',
+          item: 'Stay inside your home and away from windows while thundering',
           category: 'evacuation',
           priority: 1,
           estimatedMinutes: 1
         },
         {
-          item: 'Iwasang gumamit ng landline phone at kumukulog',
+          item: 'Avoid using landline phones while thundering',
           category: 'communication',
           priority: 2,
           estimatedMinutes: 1
@@ -538,19 +320,19 @@ function getDisasterSpecificItems(disasterType, userProfile) {
     case 'daluyong':
       items.push(
         {
-          item: 'Lumikas sa high ground (10 meters above sea level) kung nasa coastal area',
+          item: 'Evacuate to high ground (10 meters above sea level) if in coastal area',
           category: 'evacuation',
           priority: 1,
           estimatedMinutes: 30
         },
         {
-          item: 'Monitor PAGASA storm surge alerts lalo na kung Signal #3 pataas',
+          item: 'Monitor PAGASA storm surge alerts especially if Signal #3 or higher',
           category: 'communication',
           priority: 1,
           estimatedMinutes: 5
         },
         {
-          item: 'I-secure ang bangka at gamit sa dalampasigan',
+          item: 'Secure boats and belongings on the shoreline',
           category: 'shelter',
           priority: 2,
           estimatedMinutes: 45
