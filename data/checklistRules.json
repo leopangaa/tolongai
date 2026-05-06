@@ -1,0 +1,310 @@
+[
+  {
+    "id": "chk_evacuation_001",
+    "triggerCondition": {},
+    "checklistItem": "Prepare go bag with birth certificate, vaccination card, and family photos",
+    "category": "evacuation",
+    "priority": 1,
+    "estimatedMinutes": 20
+  },
+  {
+    "id": "chk_water_food_001",
+    "triggerCondition": {},
+    "checklistItem": "Stock 1 gallon of potable water per person per day for 7 days minimum",
+    "category": "water_food",
+    "priority": 1,
+    "estimatedMinutes": 30
+  },
+  {
+    "id": "chk_water_food_002",
+    "triggerCondition": {},
+    "checklistItem": "Stock 7-day supply of non-perishable food (canned goods, instant noodles, biscuits, chocolate)",
+    "category": "water_food",
+    "priority": 1,
+    "estimatedMinutes": 45
+  },
+  {
+    "id": "chk_communication_001",
+    "triggerCondition": {},
+    "checklistItem": "Have battery-powered radio and keep powerbanks fully charged",
+    "category": "communication",
+    "priority": 1,
+    "estimatedMinutes": 15
+  },
+  {
+    "id": "chk_communication_002",
+    "triggerCondition": {},
+    "checklistItem": "Create family emergency communication plan with meeting points and contact numbers",
+    "category": "communication",
+    "priority": 1,
+    "estimatedMinutes": 30
+  },
+  {
+    "id": "chk_documents_001",
+    "triggerCondition": {},
+    "checklistItem": "Keep copies of important documents (IDs, insurance, deeds) in waterproof container",
+    "category": "documents",
+    "priority": 2,
+    "estimatedMinutes": 25
+  },
+  {
+    "id": "chk_medical_001",
+    "triggerCondition": {},
+    "checklistItem": "Assemble first aid kit with bandages, antiseptic, pain relievers, antihistamines",
+    "category": "medical",
+    "priority": 1,
+    "estimatedMinutes": 20
+  },
+  {
+    "id": "chk_typhoon_001",
+    "triggerCondition": {
+      "disasterTypes": [
+        "typhoon"
+      ]
+    },
+    "checklistItem": "Charge all powerbanks, flashlights, and mobile devices; stock batteries",
+    "category": "communication",
+    "priority": 1,
+    "estimatedMinutes": 20
+  },
+  {
+    "id": "chk_typhoon_002",
+    "triggerCondition": {
+      "disasterTypes": [
+        "typhoon"
+      ]
+    },
+    "checklistItem": "Stock plywood, nails, and duct tape for boarding windows; secure outdoor items",
+    "category": "shelter",
+    "priority": 2,
+    "estimatedMinutes": 60
+  },
+  {
+    "id": "chk_flood_001",
+    "triggerCondition": {
+      "disasterTypes": [
+        "flood"
+      ]
+    },
+    "checklistItem": "Know evacuation routes from home and location of nearest evacuation center via barangay",
+    "category": "evacuation",
+    "priority": 1,
+    "estimatedMinutes": 30
+  },
+  {
+    "id": "chk_flood_002",
+    "triggerCondition": {
+      "disasterTypes": [
+        "flood"
+      ]
+    },
+    "checklistItem": "Clear gutters, drainage areas, and storm drains near home",
+    "category": "shelter",
+    "priority": 2,
+    "estimatedMinutes": 45
+  },
+  {
+    "id": "chk_earthquake_001",
+    "triggerCondition": {
+      "disasterTypes": [
+        "earthquake"
+      ]
+    },
+    "checklistItem": "Secure heavy furniture, appliances, and shelves to walls with brackets",
+    "category": "shelter",
+    "priority": 2,
+    "estimatedMinutes": 120
+  },
+  {
+    "id": "chk_earthquake_002",
+    "triggerCondition": {
+      "disasterTypes": [
+        "earthquake"
+      ]
+    },
+    "checklistItem": "Identify DROP-COVER-HOLD locations in each room and practice earthquake drill monthly",
+    "category": "evacuation",
+    "priority": 1,
+    "estimatedMinutes": 20
+  },
+  {
+    "id": "chk_volcanic_001",
+    "triggerCondition": {
+      "disasterTypes": [
+        "volcanic eruption"
+      ]
+    },
+    "checklistItem": "Stock N95 masks and respirators for ashfall from PHIVOLCS alert areas",
+    "category": "medical",
+    "priority": 1,
+    "estimatedMinutes": 10
+  },
+  {
+    "id": "chk_tsunami_001",
+    "triggerCondition": {
+      "disasterTypes": [
+        "tsunami"
+      ]
+    },
+    "checklistItem": "Identify and practice tsunami evacuation routes to high ground away from coast",
+    "category": "evacuation",
+    "priority": 1,
+    "estimatedMinutes": 30
+  },
+  {
+    "id": "chk_fire_001",
+    "triggerCondition": {
+      "disasterTypes": [
+        "fire"
+      ]
+    },
+    "checklistItem": "Have two evacuation routes from home and practice fire drill with family",
+    "category": "evacuation",
+    "priority": 1,
+    "estimatedMinutes": 25
+  },
+  {
+    "id": "chk_elderly_001",
+    "triggerCondition": {
+      "userProfile": {
+        "hasElderly": true
+      }
+    },
+    "checklistItem": "Stock 30-day supply of all prescription medications for elderly family members",
+    "category": "medical",
+    "priority": 1,
+    "estimatedMinutes": 15
+  },
+  {
+    "id": "chk_elderly_002",
+    "triggerCondition": {
+      "userProfile": {
+        "hasElderly": true
+      }
+    },
+    "checklistItem": "Prepare mobility aids (canes, walkers) and arrange barangay assistance for evacuation",
+    "category": "special_needs",
+    "priority": 2,
+    "estimatedMinutes": 20
+  },
+  {
+    "id": "chk_infants_001",
+    "triggerCondition": {
+      "userProfile": {
+        "hasInfants": true
+      }
+    },
+    "checklistItem": "Stock 30-day supply of infant formula, diapers, and baby food",
+    "category": "water_food",
+    "priority": 1,
+    "estimatedMinutes": 40
+  },
+  {
+    "id": "chk_infants_002",
+    "triggerCondition": {
+      "userProfile": {
+        "hasInfants": true
+      }
+    },
+    "checklistItem": "Prepare infant-sized first aid kit, baby medications, and vaccination records in go bag",
+    "category": "medical",
+    "priority": 1,
+    "estimatedMinutes": 20
+  },
+  {
+    "id": "chk_pets_001",
+    "triggerCondition": {
+      "userProfile": {
+        "hasPets": true
+      }
+    },
+    "checklistItem": "Prepare pet carrier, leash, and 7-day food/water supply in accessible location",
+    "category": "pets",
+    "priority": 2,
+    "estimatedMinutes": 20
+  },
+  {
+    "id": "chk_pets_002",
+    "triggerCondition": {
+      "userProfile": {
+        "hasPets": true
+      }
+    },
+    "checklistItem": "Keep recent pet photos and vaccination/microchip records accessible for evacuation",
+    "category": "pets",
+    "priority": 2,
+    "estimatedMinutes": 10
+  },
+  {
+    "id": "chk_floodzone_001",
+    "triggerCondition": {
+      "userProfile": {
+        "livesInFloodZone": true
+      }
+    },
+    "checklistItem": "Move valuables, important documents, and medications to upper floors before monsoon",
+    "category": "shelter",
+    "priority": 1,
+    "estimatedMinutes": 60
+  },
+  {
+    "id": "chk_floodzone_002",
+    "triggerCondition": {
+      "userProfile": {
+        "livesInFloodZone": true
+      }
+    },
+    "checklistItem": "Monitor PAGASA rainfall updates and coordinate evacuation plan with barangay",
+    "category": "communication",
+    "priority": 1,
+    "estimatedMinutes": 15
+  },
+  {
+    "id": "chk_coastal_001",
+    "triggerCondition": {
+      "userProfile": {
+        "livesInCoastalArea": true
+      }
+    },
+    "checklistItem": "Identify tsunami evacuation routes to high ground and practice with family",
+    "category": "evacuation",
+    "priority": 1,
+    "estimatedMinutes": 30
+  },
+  {
+    "id": "chk_volcano_001",
+    "triggerCondition": {
+      "userProfile": {
+        "livesNearVolcano": true
+      }
+    },
+    "checklistItem": "Know PHIVOLCS alert levels and evacuation procedures for your volcano zone",
+    "category": "evacuation",
+    "priority": 1,
+    "estimatedMinutes": 20
+  },
+  {
+    "id": "chk_slope_001",
+    "triggerCondition": {
+      "userProfile": {
+        "livesOnSteepSlope": true
+      }
+    },
+    "checklistItem": "Know landslide evacuation routes and coordinate with barangay during heavy rains",
+    "category": "evacuation",
+    "priority": 1,
+    "estimatedMinutes": 25
+  },
+  {
+    "id": "chk_medical_002",
+    "triggerCondition": {
+      "userProfile": {
+        "hasMedicalNeeds": true
+      }
+    },
+    "checklistItem": "Stock 30-day supply of all necessary medications and medical supplies",
+    "category": "medical",
+    "priority": 1,
+    "estimatedMinutes": 20
+  }
+]
