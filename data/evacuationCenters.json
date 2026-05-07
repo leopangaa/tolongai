@@ -1,0 +1,359 @@
+[
+  {
+    "id": "evac_qc_001",
+    "name": "Quezon City Disaster Management Center",
+    "type": "purpose-built_evacuation_center",
+    "location": {
+      "city": "Quezon City",
+      "region": "NCR",
+      "barangay": "Balangiga",
+      "latitude": 14.6349,
+      "longitude": 121.0441
+    },
+    "capacity": 1500,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "medical_triage", "parking", "food_prep", "toilet", "shower"],
+    "contactPhone": "02-9281-8500",
+    "disasterTypesSupported": ["typhoon", "flood", "earthquake", "fire"]
+  },
+  {
+    "id": "evac_manila_001",
+    "name": "Manila Emergency Shelter Complex",
+    "type": "purpose-built_evacuation_center",
+    "location": {
+      "city": "Manila",
+      "region": "NCR",
+      "barangay": "Santa Ana",
+      "latitude": 14.5994,
+      "longitude": 120.9842
+    },
+    "capacity": 2000,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "medical_triage", "parking", "food_prep", "toilet", "shower", "pet_friendly"],
+    "contactPhone": "02-5262-0833",
+    "disasterTypesSupported": ["flood", "typhoon", "earthquake", "fire"]
+  },
+  {
+    "id": "evac_makati_001",
+    "name": "Makati City Evacuation Center",
+    "type": "purpose-built_evacuation_center",
+    "location": {
+      "city": "Makati",
+      "region": "NCR",
+      "barangay": "Singil",
+      "latitude": 14.5526,
+      "longitude": 121.0475
+    },
+    "capacity": 1200,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "medical_triage", "parking", "food_prep", "toilet"],
+    "contactPhone": "02-8889-6600",
+    "disasterTypesSupported": ["earthquake", "fire", "typhoon", "flood"]
+  },
+  {
+    "id": "evac_qc_002",
+    "name": "Dr. Arcadio Santos Avenue Science High School",
+    "type": "school",
+    "location": {
+      "city": "Quezon City",
+      "region": "NCR",
+      "barangay": "Anonas",
+      "latitude": 14.6183,
+      "longitude": 121.0331
+    },
+    "capacity": 800,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "parking", "food_prep", "toilet"],
+    "contactPhone": "02-7714-0123",
+    "disasterTypesSupported": ["typhoon", "flood", "earthquake"]
+  },
+  {
+    "id": "evac_manila_002",
+    "name": "Manila Science High School",
+    "type": "school",
+    "location": {
+      "city": "Manila",
+      "region": "NCR",
+      "barangay": "Sampaloc",
+      "latitude": 14.6017,
+      "longitude": 120.9934
+    },
+    "capacity": 950,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "parking", "food_prep", "toilet", "medical_triage"],
+    "contactPhone": "02-7991-8282",
+    "disasterTypesSupported": ["flood", "typhoon", "earthquake"]
+  },
+  {
+    "id": "evac_bulacan_001",
+    "name": "Malolos Central School",
+    "type": "school",
+    "location": {
+      "city": "Malolos",
+      "region": "Region 3",
+      "barangay": "Lugitan",
+      "latitude": 14.8265,
+      "longitude": 120.7869
+    },
+    "capacity": 700,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "parking", "food_prep", "toilet", "generator"],
+    "contactPhone": "044-798-2871",
+    "disasterTypesSupported": ["flood", "typhoon", "fire"]
+  },
+  {
+    "id": "evac_pampanga_001",
+    "name": "Angeles City National High School",
+    "type": "school",
+    "location": {
+      "city": "Angeles City",
+      "region": "Region 3",
+      "barangay": "Cutcut",
+      "latitude": 15.1488,
+      "longitude": 120.5867
+    },
+    "capacity": 850,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "parking", "food_prep", "toilet", "shower"],
+    "contactPhone": "045-322-2640",
+    "disasterTypesSupported": ["fire", "earthquake", "flood", "typhoon"]
+  },
+  {
+    "id": "evac_albay_001",
+    "name": "Legazpi City Central School",
+    "type": "school",
+    "location": {
+      "city": "Legazpi City",
+      "region": "Region 5",
+      "barangay": "Rizal",
+      "latitude": 13.1393,
+      "longitude": 123.7357
+    },
+    "capacity": 900,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "medical_triage", "parking", "food_prep", "toilet"],
+    "contactPhone": "052-480-1234",
+    "disasterTypesSupported": ["volcanic eruption", "typhoon", "flood", "earthquake"]
+  },
+  {
+    "id": "evac_cebu_001",
+    "name": "Cebu City National High School",
+    "type": "school",
+    "location": {
+      "city": "Cebu City",
+      "region": "Region 7",
+      "barangay": "Busay",
+      "latitude": 10.3157,
+      "longitude": 123.8854
+    },
+    "capacity": 1100,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "medical_triage", "parking", "food_prep", "toilet", "shower"],
+    "contactPhone": "032-254-6789",
+    "disasterTypesSupported": ["typhoon", "earthquake", "tsunami", "flood"]
+  },
+  {
+    "id": "evac_iloilo_001",
+    "name": "Iloilo City National High School",
+    "type": "school",
+    "location": {
+      "city": "Iloilo City",
+      "region": "Region 6",
+      "barangay": "Molo",
+      "latitude": 10.6917,
+      "longitude": 122.5597
+    },
+    "capacity": 800,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "parking", "food_prep", "toilet"],
+    "contactPhone": "033-320-5555",
+    "disasterTypesSupported": ["typhoon", "flood", "earthquake"]
+  },
+  {
+    "id": "evac_leyte_001",
+    "name": "Tacloban City High School",
+    "type": "school",
+    "location": {
+      "city": "Tacloban City",
+      "region": "Region 8",
+      "barangay": "Marasbaras",
+      "latitude": 11.2711,
+      "longitude": 124.9873
+    },
+    "capacity": 950,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "medical_triage", "parking", "food_prep", "toilet"],
+    "contactPhone": "053-305-8888",
+    "disasterTypesSupported": ["typhoon", "tsunami", "flood", "landslide"]
+  },
+  {
+    "id": "evac_davao_001",
+    "name": "Davao City National High School",
+    "type": "school",
+    "location": {
+      "city": "Davao City",
+      "region": "Region 11",
+      "barangay": "Talomo",
+      "latitude": 7.0731,
+      "longitude": 125.6121
+    },
+    "capacity": 1000,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "medical_triage", "parking", "food_prep", "toilet", "shower"],
+    "contactPhone": "082-227-0011",
+    "disasterTypesSupported": ["earthquake", "flood", "landslide", "fire"]
+  },
+  {
+    "id": "evac_cdo_001",
+    "name": "Cagayan de Oro City High School",
+    "type": "school",
+    "location": {
+      "city": "Cagayan de Oro",
+      "region": "Region 10",
+      "barangay": "Bulua",
+      "latitude": 8.4866,
+      "longitude": 124.6430
+    },
+    "capacity": 850,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "parking", "food_prep", "toilet"],
+    "contactPhone": "088-857-7777",
+    "disasterTypesSupported": ["typhoon", "flood", "landslide", "earthquake"]
+  },
+  {
+    "id": "evac_zamboanga_001",
+    "name": "Zamboanga City High School",
+    "type": "school",
+    "location": {
+      "city": "Zamboanga City",
+      "region": "Region 9",
+      "barangay": "Baliwasan",
+      "latitude": 6.9271,
+      "longitude": 122.0726
+    },
+    "capacity": 800,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "medical_triage", "parking", "food_prep"],
+    "contactPhone": "062-991-4444",
+    "disasterTypesSupported": ["typhoon", "flood", "fire", "tsunami"]
+  },
+  {
+    "id": "evac_qc_003",
+    "name": "Barangay Bagumbayan Community Hall",
+    "type": "barangay_hall",
+    "location": {
+      "city": "Quezon City",
+      "region": "NCR",
+      "barangay": "Bagumbayan",
+      "latitude": 14.5733,
+      "longitude": 121.0589
+    },
+    "capacity": 400,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "parking", "food_prep", "toilet", "generator"],
+    "contactPhone": "0917-123-4567",
+    "disasterTypesSupported": ["flood", "typhoon", "earthquake"]
+  },
+  {
+    "id": "evac_manila_003",
+    "name": "Barangay Baseco Multi-Purpose Hall",
+    "type": "barangay_hall",
+    "location": {
+      "city": "Manila",
+      "region": "NCR",
+      "barangay": "Baseco",
+      "latitude": 14.5644,
+      "longitude": 120.9513
+    },
+    "capacity": 450,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "parking", "food_prep", "toilet", "pet_friendly"],
+    "contactPhone": "0918-456-7890",
+    "disasterTypesSupported": ["flood", "typhoon", "fire"]
+  },
+  {
+    "id": "evac_bulacan_002",
+    "name": "Barangay Marilao Community Center",
+    "type": "barangay_hall",
+    "location": {
+      "city": "Marilao",
+      "region": "Region 3",
+      "barangay": "Marilao",
+      "latitude": 14.8497,
+      "longitude": 120.8456
+    },
+    "capacity": 380,
+    "currentOccupancy": 0,
+    "facilities": ["parking", "food_prep", "toilet", "generator"],
+    "contactPhone": "0919-789-0123",
+    "disasterTypesSupported": ["flood", "typhoon", "fire"]
+  },
+  {
+    "id": "evac_cebu_002",
+    "name": "Barangay Pardo Multi-Purpose Hall",
+    "type": "barangay_hall",
+    "location": {
+      "city": "Cebu City",
+      "region": "Region 7",
+      "barangay": "Pardo",
+      "latitude": 10.2833,
+      "longitude": 123.8833
+    },
+    "capacity": 350,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "parking", "food_prep", "toilet"],
+    "contactPhone": "0920-234-5678",
+    "disasterTypesSupported": ["typhoon", "earthquake", "tsunami"]
+  },
+  {
+    "id": "evac_davao_002",
+    "name": "Barangay Poblacion Community Hall",
+    "type": "barangay_hall",
+    "location": {
+      "city": "Davao City",
+      "region": "Region 11",
+      "barangay": "Poblacion",
+      "latitude": 7.1141,
+      "longitude": 125.6411
+    },
+    "capacity": 420,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "parking", "food_prep", "toilet", "generator"],
+    "contactPhone": "0921-567-8901",
+    "disasterTypesSupported": ["earthquake", "flood", "landslide"]
+  },
+  {
+    "id": "evac_makati_002",
+    "name": "Makati Coliseum Sports Complex",
+    "type": "gymnasium",
+    "location": {
+      "city": "Makati",
+      "region": "NCR",
+      "barangay": "Bangkal",
+      "latitude": 14.5539,
+      "longitude": 121.0279
+    },
+    "capacity": 1300,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "medical_triage", "parking", "food_prep", "toilet", "shower", "pet_friendly"],
+    "contactPhone": "02-8892-1111",
+    "disasterTypesSupported": ["earthquake", "typhoon", "fire", "flood"]
+  },
+  {
+    "id": "evac_cebu_003",
+    "name": "Cebu City Sports Complex Gymnasium",
+    "type": "gymnasium",
+    "location": {
+      "city": "Cebu City",
+      "region": "Region 7",
+      "barangay": "Camputhaw",
+      "latitude": 10.3028,
+      "longitude": 123.8881
+    },
+    "capacity": 1400,
+    "currentOccupancy": 0,
+    "facilities": ["wheelchair_accessible", "generator", "medical_triage", "parking", "food_prep", "toilet", "shower"],
+    "contactPhone": "032-255-8000",
+    "disasterTypesSupported": ["typhoon", "earthquake", "tsunami", "flood", "fire"]
+  }
+]

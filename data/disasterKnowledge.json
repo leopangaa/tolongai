@@ -1,0 +1,468 @@
+[
+  {
+    "id": "dis_typhoon",
+    "disasterType": "typhoon",
+    "warningSigns": [
+      "PAGASA Signal #1 raised",
+      "Sustained winds 60km/h",
+      "Heavy rainfall 24hrs+",
+      "Storm surge possible"
+    ],
+    "prepActions": [
+      "Prepare go bag with documents",
+      "Charge powerbanks and flashlights",
+      "Store 7 days water (1 gallon per person)",
+      "Listen to battery-powered radio",
+      "Coordinate with barangay officials"
+    ],
+    "duringActions": [
+      "Stay indoors away from windows",
+      "Monitor PAGASA updates regularly",
+      "Avoid flooded and windy areas",
+      "Do not cross rivers or low-lying roads"
+    ],
+    "afterActions": [
+      "Check home for structural damage",
+      "Avoid downed electrical wires",
+      "Report damage to barangay"
+    ],
+    "keywordsForSearch": [
+      "typhoon",
+      "storm",
+      "wind",
+      "rain"
+    ],
+    "tagalogKeywords": [
+      "bagyo",
+      "hanging",
+      "ulan",
+      "ahon"
+    ],
+    "localAgency": "PAGASA",
+    "alertLevels": [
+      "Signal #1",
+      "Signal #2",
+      "Signal #3",
+      "Signal #4",
+      "Signal #5"
+    ]
+  },
+  {
+    "id": "dis_flood",
+    "disasterType": "flood",
+    "warningSigns": [
+      "NDRRMC flood advisory issued",
+      "Heavy continuous rainfall 24+ hours",
+      "Water level rising in rivers and barangays",
+      "Flash flood alert from PAGASA"
+    ],
+    "prepActions": [
+      "Prepare evacuation kit with medicines",
+      "Know evacuation center location",
+      "Store potable water in containers",
+      "Charge mobile devices and radios",
+      "Move valuables to upper floors"
+    ],
+    "duringActions": [
+      "Move to higher ground immediately",
+      "Avoid wading through flood waters",
+      "Listen to barangay announcements",
+      "Stay away from electrical hazards"
+    ],
+    "afterActions": [
+      "Clean home to prevent disease",
+      "Report affected areas to LGU"
+    ],
+    "keywordsForSearch": [
+      "flood",
+      "water rising",
+      "rainfall",
+      "overflow"
+    ],
+    "tagalogKeywords": [
+      "baha",
+      "mataas ang tubig",
+      "ulan",
+      "paglakas"
+    ],
+    "localAgency": "NDRRMC",
+    "alertLevels": [
+      "Advisory",
+      "Level 1",
+      "Level 2",
+      "Level 3"
+    ]
+  },
+  {
+    "id": "dis_earthquake",
+    "disasterType": "earthquake",
+    "warningSigns": [
+      "PHIVOLCS earthquake bulletin issued",
+      "Strong ground shaking felt suddenly",
+      "Buildings swaying noticeably",
+      "Objects falling from shelves"
+    ],
+    "prepActions": [
+      "Secure heavy furniture to walls",
+      "Identify drop, cover, hold locations",
+      "Store emergency water and supplies",
+      "Keep documents in waterproof bag",
+      "Practice earthquake drill monthly"
+    ],
+    "duringActions": [
+      "DROP to ground immediately",
+      "COVER head and neck under table",
+      "HOLD on until shaking stops",
+      "Stay away from windows and heavy objects"
+    ],
+    "afterActions": [
+      "Check family and neighbors",
+      "Inspect home for gas leaks",
+      "Stay alert for aftershocks"
+    ],
+    "keywordsForSearch": [
+      "earthquake",
+      "shaking",
+      "tremor",
+      "quake"
+    ],
+    "tagalogKeywords": [
+      "lindol",
+      "paggalaw",
+      "pagyanig",
+      "talinsik"
+    ],
+    "localAgency": "PHIVOLCS",
+    "alertLevels": [
+      "Intensity I-III",
+      "Intensity IV-V",
+      "Intensity VI-VII",
+      "Intensity VIII+"
+    ]
+  },
+  {
+    "id": "dis_volcanic_eruption",
+    "disasterType": "volcanic eruption",
+    "warningSigns": [
+      "PHIVOLCS volcanic alert level raised",
+      "Ash column visible from volcano",
+      "Sulfur smell detected in area",
+      "NDRRMC evacuation order issued"
+    ],
+    "prepActions": [
+      "Prepare go bag with medications",
+      "Stock N95 masks for ash",
+      "Store water (ashfall contaminates supply)",
+      "Have vehicle fueled and ready",
+      "Coordinate evacuation with barangay"
+    ],
+    "duringActions": [
+      "Evacuate immediately when ordered",
+      "Wear N95 mask if in ashfall area",
+      "Close windows and doors",
+      "Stay indoors if cannot evacuate"
+    ],
+    "afterActions": [
+      "Monitor air quality advisories",
+      "Clean ash from water systems",
+      "Report to evacuation center"
+    ],
+    "keywordsForSearch": [
+      "volcanic eruption",
+      "volcano",
+      "lava",
+      "ash"
+    ],
+    "tagalogKeywords": [
+      "putok ng bundok",
+      "lava",
+      "usok",
+      "apoy"
+    ],
+    "localAgency": "PHIVOLCS",
+    "alertLevels": [
+      "Alert Level 1",
+      "Alert Level 2",
+      "Alert Level 3",
+      "Alert Level 4",
+      "Alert Level 5"
+    ]
+  },
+  {
+    "id": "dis_landslide",
+    "disasterType": "landslide",
+    "warningSigns": [
+      "PHIVOLCS landslide alert issued",
+      "Ground cracks appearing",
+      "Trees tilting on slopes",
+      "Water seeping from hillside"
+    ],
+    "prepActions": [
+      "Know evacuation routes from hillside",
+      "Prepare emergency supplies in go bag",
+      "Avoid settling near steep slopes",
+      "Stock water and food for 3 days",
+      "Monitor barangay announcements"
+    ],
+    "duringActions": [
+      "Evacuate to flat, elevated ground",
+      "Avoid areas below slopes",
+      "Do not cross debris fields",
+      "Listen to emergency broadcasts"
+    ],
+    "afterActions": [
+      "Wait for official all-clear signal",
+      "Report blocked roads",
+      "Document property damage"
+    ],
+    "keywordsForSearch": [
+      "landslide",
+      "slide",
+      "slope collapse",
+      "earth movement"
+    ],
+    "tagalogKeywords": [
+      "pagguho",
+      "gumuho",
+      "lupa",
+      "bundok"
+    ],
+    "localAgency": "PHIVOLCS",
+    "alertLevels": [
+      "Advisory",
+      "Level 1",
+      "Level 2",
+      "Level 3"
+    ]
+  },
+  {
+    "id": "dis_tsunami",
+    "disasterType": "tsunami",
+    "warningSigns": [
+      "Strong earthquake near coast detected",
+      "PHIVOLCS tsunami alert issued",
+      "Ocean water suddenly pulls back",
+      "Unusual wave behavior observed"
+    ],
+    "prepActions": [
+      "Know tsunami evacuation routes",
+      "Move to high ground location",
+      "Store emergency supplies in go bag",
+      "Keep documents in waterproof container",
+      "Establish family meeting point"
+    ],
+    "duringActions": [
+      "Move to high ground immediately",
+      "Do not go to beach to watch",
+      "Follow official evacuation directions",
+      "Stay inland at elevated location"
+    ],
+    "afterActions": [
+      "Wait for official all-clear",
+      "Check water for contamination",
+      "Document all damage"
+    ],
+    "keywordsForSearch": [
+      "tsunami",
+      "wave",
+      "coastal",
+      "ocean"
+    ],
+    "tagalogKeywords": [
+      "alon",
+      "taas ng tubig",
+      "dagat",
+      "labas dagat"
+    ],
+    "localAgency": "PHIVOLCS",
+    "alertLevels": [
+      "Advisory",
+      "Warning",
+      "All Clear"
+    ]
+  },
+  {
+    "id": "dis_fire_urban",
+    "disasterType": "fire (urban)",
+    "warningSigns": [
+      "Smoke visible from buildings",
+      "Smell of burning materials",
+      "BFP sirens activated",
+      "Evacuation orders from barangay"
+    ],
+    "prepActions": [
+      "Know two evacuation routes from home",
+      "Prepare go bag with important docs",
+      "Keep phone charged",
+      "Identify family meeting point",
+      "Stock water and non-perishable food"
+    ],
+    "duringActions": [
+      "Evacuate immediately when ordered",
+      "Move away from fire upwind",
+      "Help elderly and children",
+      "Follow barangay marshals"
+    ],
+    "afterActions": [
+      "Check in with family",
+      "Report to evacuation center",
+      "Document property damage"
+    ],
+    "keywordsForSearch": [
+      "fire",
+      "burning",
+      "evacuation",
+      "smoke"
+    ],
+    "tagalogKeywords": [
+      "sunog",
+      "apoy",
+      "usok",
+      "likas"
+    ],
+    "localAgency": "BFP",
+    "alertLevels": [
+      "Fire Alert 1",
+      "Fire Alert 2",
+      "Fire Alert 3"
+    ]
+  },
+  {
+    "id": "dis_drought",
+    "disasterType": "drought",
+    "warningSigns": [
+      "PAGASA drought warning issued",
+      "Rainfall below normal for weeks",
+      "Water supply shortage announced",
+      "Crop failure warnings from LGU"
+    ],
+    "prepActions": [
+      "Store rainwater in containers",
+      "Repair water collection systems",
+      "Stock canned/bottled water",
+      "Prepare alternative water sources",
+      "Conserve water daily"
+    ],
+    "duringActions": [
+      "Ration water usage strictly",
+      "Avoid outdoor work during peak heat",
+      "Stay hydrated with stored water",
+      "Monitor local water rationing schedule"
+    ],
+    "afterActions": [
+      "Refill water storage when supply returns",
+      "Monitor water quality",
+      "Support community water initiatives"
+    ],
+    "keywordsForSearch": [
+      "drought",
+      "water shortage",
+      "dry",
+      "rainfall deficit"
+    ],
+    "tagalogKeywords": [
+      "tagtuyot",
+      "walang ulan",
+      "tuyo",
+      "kakulangan ng tubig"
+    ],
+    "localAgency": "PAGASA",
+    "alertLevels": [
+      "Advisory",
+      "Level 1",
+      "Level 2"
+    ]
+  },
+  {
+    "id": "dis_thunderstorm",
+    "disasterType": "thunderstorm",
+    "warningSigns": [
+      "PAGASA severe thunderstorm warning",
+      "Dark clouds approaching area",
+      "Distant lightning and thunder heard",
+      "Temperature dropping suddenly"
+    ],
+    "prepActions": [
+      "Charge mobile devices and radios",
+      "Store emergency supplies indoors",
+      "Secure outdoor items",
+      "Keep battery flashlights ready",
+      "Know nearest shelter location"
+    ],
+    "duringActions": [
+      "Stay indoors away from windows",
+      "Unplug electrical appliances",
+      "Avoid using landline phone",
+      "Do not venture outdoors"
+    ],
+    "afterActions": [
+      "Check for downed power lines",
+      "Inspect roof for damage",
+      "Report hazards to barangay"
+    ],
+    "keywordsForSearch": [
+      "thunderstorm",
+      "lightning",
+      "thunder",
+      "heavy rain"
+    ],
+    "tagalogKeywords": [
+      "kidlat",
+      "kulog",
+      "ulan na malakas",
+      "bagyo"
+    ],
+    "localAgency": "PAGASA",
+    "alertLevels": [
+      "Watch",
+      "Warning",
+      "Severe Warning"
+    ]
+  },
+  {
+    "id": "dis_storm_surge",
+    "disasterType": "storm surge",
+    "warningSigns": [
+      "PAGASA storm surge alert issued",
+      "Typhoon Signal #3-5 raised",
+      "Abnormal sea level rise",
+      "High tide coinciding with strong winds"
+    ],
+    "prepActions": [
+      "Evacuate low-lying coastal areas",
+      "Prepare go bag with essentials",
+      "Move vehicles to higher ground",
+      "Stock water and food",
+      "Know evacuation center location"
+    ],
+    "duringActions": [
+      "Evacuate to high ground immediately",
+      "Avoid coastal roads and beaches",
+      "Stay away from storm surge paths",
+      "Monitor PAGASA updates"
+    ],
+    "afterActions": [
+      "Check for structural damage",
+      "Clean home of sea debris",
+      "Report damage to LGU"
+    ],
+    "keywordsForSearch": [
+      "storm surge",
+      "sea level rise",
+      "coastal flood",
+      "tidal surge"
+    ],
+    "tagalogKeywords": [
+      "pagtaas ng alon",
+      "baha sa dagat",
+      "alon na mataas",
+      "daluyong"
+    ],
+    "localAgency": "PAGASA",
+    "alertLevels": [
+      "Alert",
+      "Watch",
+      "Warning"
+    ]
+  }
+]

@@ -1,0 +1,1438 @@
+[
+  {
+    "id": "hot_911_national",
+    "serviceName": "National Emergency Hotline",
+    "phoneNumber": "911",
+    "category": "emergency",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "region": "national",
+    "description": "All emergencies: medical, fire, accident, crime, disaster",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ndrrmc_national_trunk",
+    "serviceName": "National Disaster Risk Reduction & Management Council (NDRRMC)",
+    "phoneNumber": "(02) 8911-5061",
+    "category": "disaster",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8911-5062",
+      "(02) 8911-5063",
+      "(02) 8911-5064",
+      "(02) 8911-5065",
+      "(02) 8911-1406",
+      "(02) 8912-2665",
+      "(02) 8912-5668",
+      "(02) 8911-1873"
+    ],
+    "extensions": {
+      "local": "100"
+    },
+    "region": "national",
+    "description": "Disaster response coordination, evacuation, relief assistance - Trunk lines and Operations Center",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ndrrmc_ocd_ncr",
+    "serviceName": "Office of Civil Defense - National Capital Region",
+    "phoneNumber": "(02) 8421-1918",
+    "category": "disaster",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8913-2786"
+    ],
+    "region": "NCR",
+    "description": "Disaster response for Metro Manila",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ndrrmc_region1",
+    "serviceName": "NDRRMC - Region I",
+    "phoneNumber": "(072) 607-6528",
+    "category": "disaster",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(072) 700-4747"
+    ],
+    "region": "Region I",
+    "description": "Disaster response for Ilocos region",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ndrrmc_region2",
+    "serviceName": "NDRRMC - Region II",
+    "phoneNumber": "(078) 304-1630",
+    "category": "disaster",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(078) 304-1631"
+    ],
+    "region": "Region II",
+    "description": "Disaster response for Cagayan Valley",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ndrrmc_region3",
+    "serviceName": "NDRRMC - Region III",
+    "phoneNumber": "(045) 455-1526",
+    "category": "disaster",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(045) 455-0033"
+    ],
+    "region": "Region III",
+    "description": "Disaster response for Central Luzon",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ndrrmc_region4a",
+    "serviceName": "NDRRMC - Region IV-A",
+    "phoneNumber": "(049) 834-4344",
+    "category": "disaster",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(049) 531-7266",
+      "(049) 531-7279"
+    ],
+    "region": "Region IV-A",
+    "description": "Disaster response for CALABARZON",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ndrrmc_region4b",
+    "serviceName": "NDRRMC - Region IV-B",
+    "phoneNumber": "(043) 723-4248",
+    "category": "disaster",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(043) 702-9361"
+    ],
+    "region": "Region IV-B",
+    "description": "Disaster response for MIMAROPA",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ndrrmc_region5",
+    "serviceName": "NDRRMC - Region V",
+    "phoneNumber": "(052) 742-1176",
+    "category": "disaster",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [
+        {
+          "network": "Globe",
+          "number": "+63917-574-7880"
+        },
+        {
+          "network": "Smart",
+          "number": "+63928-505-3861"
+        }
+      ],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "region": "Region V",
+    "description": "Disaster response for Bicol region",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ndrrmc_region6",
+    "serviceName": "NDRRMC - Region VI",
+    "phoneNumber": "(033) 336-9353",
+    "category": "disaster",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(033) 337-6671",
+      "(033) 509-7319"
+    ],
+    "region": "Region VI",
+    "description": "Disaster response for Western Visayas",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ndrrmc_region7",
+    "serviceName": "NDRRMC - Region VII",
+    "phoneNumber": "(032) 416-5025",
+    "category": "disaster",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [
+        {
+          "network": "Globe",
+          "number": "+63917-947-5666"
+        },
+        {
+          "network": "Smart",
+          "number": "+63949-471-0009"
+        }
+      ],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(032) 253-6162",
+      "(032) 253-8730"
+    ],
+    "region": "Region VII",
+    "description": "Disaster response for Central Visayas",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ndrrmc_car",
+    "serviceName": "NDRRMC - Cordillera Administrative Region (CAR)",
+    "phoneNumber": "(074) 304-2256",
+    "category": "disaster",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(074) 619-0986",
+      "(074) 444-5298"
+    ],
+    "region": "CAR",
+    "description": "Disaster response for Cordillera region",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_dswd_national",
+    "serviceName": "Department of Social Welfare and Development (DSWD)",
+    "phoneNumber": "(02) 8931-8101",
+    "category": "social_services",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": "0918-912-2813",
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8931-8102",
+      "(02) 8931-8103",
+      "(02) 8931-8104",
+      "(02) 8931-8105",
+      "(02) 8931-8106",
+      "(02) 8931-8107"
+    ],
+    "extensions": {
+      "disaster_response": "TBD"
+    },
+    "region": "national",
+    "description": "Disaster response, relief assistance, family services - Disaster Response Unit",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_dswd_ncr_crisis",
+    "serviceName": "DSWD - NCR Ugnayan Pag-asa Crisis Intervention Center",
+    "phoneNumber": "(02) 8734-8639",
+    "category": "social_services",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8734-8654",
+      "(02) 8734-8626",
+      "(02) 8734-8627"
+    ],
+    "region": "NCR",
+    "description": "Crisis intervention and support services",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_redcross_143",
+    "serviceName": "Philippine Red Cross",
+    "phoneNumber": "143",
+    "category": "medical_rescue",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8527-8385",
+      "(02) 8527-8386",
+      "(02) 8527-8387",
+      "(02) 8527-8388",
+      "(02) 8527-8389",
+      "(02) 8527-8390",
+      "(02) 8527-8391",
+      "(02) 8527-8392",
+      "(02) 8527-8393",
+      "(02) 8527-8394",
+      "(02) 8527-8395",
+      "(02) 8527-0000",
+      "(02) 8790-2300"
+    ],
+    "extensions": {
+      "national_blood_center": "Main",
+      "disaster_management": "134 (Staff), 132 (Manager), 133 (Radio Room)",
+      "emergency_response": "604"
+    },
+    "region": "national",
+    "description": "Ambulance, rescue, medical emergency, blood bank, family reunification, disaster management",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_pnp_117",
+    "serviceName": "Philippine National Police (PNP)",
+    "phoneNumber": "117",
+    "category": "law_enforcement",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": "0917-847-5757",
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8722-0650"
+    ],
+    "region": "national",
+    "description": "Crime, theft, accident, public safety, missing person report",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_pnp_wcpc",
+    "serviceName": "Philippine National Police - Women and Children Protection Center (WCPC)",
+    "phoneNumber": "(02) 3410-3213",
+    "category": "protection_services",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "region": "national",
+    "description": "Violence against women and children incidents, protection services",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_pnp_vawc",
+    "serviceName": "Philippine National Police - VAWC Hotline",
+    "phoneNumber": "(02) 8723-0401",
+    "category": "protection_services",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8723-0402",
+      "(02) 8723-0403",
+      "(02) 8723-0404",
+      "(02) 8723-0405",
+      "(02) 8723-0406",
+      "(02) 8723-0407",
+      "(02) 8723-0408",
+      "(02) 8723-0409",
+      "(02) 8723-0410",
+      "(02) 8723-0411",
+      "(02) 8723-0412",
+      "(02) 8723-0413",
+      "(02) 8723-0414",
+      "(02) 8723-0415",
+      "(02) 8723-0416",
+      "(02) 8723-0417",
+      "(02) 8723-0418",
+      "(02) 8723-0419",
+      "(02) 8723-0420"
+    ],
+    "region": "national",
+    "description": "Violence Against Women and Children hotline",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_bfp_117",
+    "serviceName": "Bureau of Fire Protection (BFP)",
+    "phoneNumber": "117",
+    "category": "emergency",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8426-0219",
+      "(02) 8426-0246"
+    ],
+    "region": "national",
+    "description": "Fire emergency, building fire, rescue from fire, fire prevention",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_mmda_136",
+    "serviceName": "Metro Manila Development Authority (MMDA)",
+    "phoneNumber": "136",
+    "category": "rescue_services",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": "0939-922-7161",
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8882-4151",
+      "(02) 8882-4152",
+      "(02) 8882-4153",
+      "(02) 8882-4154",
+      "(02) 8882-4155",
+      "(02) 8882-4156",
+      "(02) 8882-4157",
+      "(02) 8882-4158",
+      "(02) 8882-4159",
+      "(02) 8882-4160",
+      "(02) 8882-4161",
+      "(02) 8882-4162",
+      "(02) 8882-4163",
+      "(02) 8882-4164",
+      "(02) 8882-4165",
+      "(02) 8882-4166",
+      "(02) 8882-4167",
+      "(02) 8882-4168",
+      "(02) 8882-4169",
+      "(02) 8882-4170",
+      "(02) 8882-4171",
+      "(02) 8882-4172",
+      "(02) 8882-4173",
+      "(02) 8882-4174",
+      "(02) 8882-4175",
+      "(02) 8882-4176",
+      "(02) 8882-4177"
+    ],
+    "extensions": {
+      "rescue": "337",
+      "metrobase": "1096",
+      "road_safety": "1135",
+      "public_safety": "1168",
+      "road_emergency": "1169",
+      "flood_control": "1162/1163",
+      "anti_jaywalking": "1070"
+    },
+    "region": "NCR",
+    "description": "Rescue operations, flood control, road emergency assistance, traffic management in Metro Manila",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_pcg_national",
+    "serviceName": "Philippine Coast Guard",
+    "phoneNumber": "(02) 8527-8481",
+    "category": "maritime_rescue",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": "0917-PCG-DOTC (0917-724-3682), 0918-967-4697",
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8527-8482",
+      "(02) 8527-8483",
+      "(02) 8527-8484",
+      "(02) 8527-8485",
+      "(02) 8527-8486",
+      "(02) 8527-8487",
+      "(02) 8527-8488",
+      "(02) 8527-8489",
+      "(02) 8527-3877",
+      "(02) 8527-3880",
+      "(02) 8527-3881",
+      "(02) 8527-3882",
+      "(02) 8527-3883",
+      "(02) 8527-3884",
+      "(02) 8527-3885"
+    ],
+    "extensions": {
+      "6291": "Local extension"
+    },
+    "region": "national",
+    "description": "Maritime emergency, rescue at sea, sea accident, tsunami warning",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_pagasa_national",
+    "serviceName": "Philippine Atmospheric, Geophysical and Astronomical Services Administration (PAGASA)",
+    "phoneNumber": "(02) 8284-0800",
+    "category": "weather_warnings",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "region": "national",
+    "description": "Typhoon tracking, weather advisories, flood warnings, storm surge forecasts, PAGASA signal updates",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_phivolcs_national",
+    "serviceName": "Philippine Institute of Volcanology and Seismology (PHIVOLCS)",
+    "phoneNumber": "(02) 8426-1468",
+    "category": "disaster_monitoring",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8426-1469",
+      "(02) 8426-1470",
+      "(02) 8426-1471",
+      "(02) 8426-1472",
+      "(02) 8426-1473",
+      "(02) 8426-1474",
+      "(02) 8426-1475",
+      "(02) 8426-1476",
+      "(02) 8426-1477",
+      "(02) 8426-1478",
+      "(02) 8426-1479"
+    ],
+    "region": "national",
+    "description": "Earthquake information, volcano activity, landslide warnings, seismic updates",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_dpwh_national",
+    "serviceName": "Department of Public Works and Highways (DPWH)",
+    "phoneNumber": "165-02",
+    "category": "infrastructure",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 5304-3000"
+    ],
+    "region": "national",
+    "description": "Road damage, bridge collapse, infrastructure damage reporting",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_dilg_national",
+    "serviceName": "Department of Interior and Local Government (DILG)",
+    "phoneNumber": "(02) 8876-3454",
+    "category": "local_government",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "region": "national",
+    "description": "Local government coordination, disaster response support",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_dotr_action_center",
+    "serviceName": "Department of Transportation (DOTr) Action Center",
+    "phoneNumber": "7890",
+    "category": "transportation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8790-8300",
+      "(02) 8726-4925"
+    ],
+    "region": "national",
+    "description": "Transportation emergency, road incidents, public transport assistance",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_caap_operations",
+    "serviceName": "Civil Aviation Authority of the Philippines (CAAP) Operations Center",
+    "phoneNumber": "(02) 7944-2030",
+    "category": "aviation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 7944-2031"
+    ],
+    "region": "national",
+    "description": "Aviation emergency, aircraft incidents, airport operations",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_miaa_naia",
+    "serviceName": "Manila International Airport Authority (MIAA) - NAIA",
+    "phoneNumber": "(02) 8877-1109",
+    "category": "aviation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": "0917-839-6242 (TEXNAIA), 0918-918-6242",
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8877-7888"
+    ],
+    "extensions": {
+      "terminals_1_2_4": "(02) 8877-1109",
+      "terminal_3": "(02) 8877-7888"
+    },
+    "region": "NCR",
+    "description": "Manila International Airport operations, emergencies at NAIA",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ciac_clark",
+    "serviceName": "Clark International Airport Corporation (CIAC)",
+    "phoneNumber": "(045) 499-1464",
+    "category": "aviation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "region": "Region III",
+    "description": "Clark International Airport operations and emergencies",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_mciaa_cebu",
+    "serviceName": "Mactan-Cebu International Airport Authority (MCIAA)",
+    "phoneNumber": "(032) 340-0228",
+    "category": "aviation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "region": "Region VII",
+    "description": "Mactan-Cebu International Airport operations",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_cab_aviation",
+    "serviceName": "Civil Aeronautics Board (CAB)",
+    "phoneNumber": "165-66",
+    "category": "aviation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8853-7259",
+      "(02) 8854-5996"
+    ],
+    "region": "national",
+    "description": "Civil aviation assistance and public complaints",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_marina_maritime",
+    "serviceName": "Maritime Industry Authority (MARINA)",
+    "phoneNumber": "0917-SUMBONG (7862664)",
+    "category": "maritime",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [
+        {
+          "network": "Call/Text",
+          "number": "0917-SUMBONG"
+        }
+      ],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8523-9078",
+      "(02) 8526-0971",
+      "(02) 8524-2895"
+    ],
+    "region": "national",
+    "description": "Maritime complaints and industry assistance",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_lto_transport",
+    "serviceName": "Land Transportation Office (LTO)",
+    "phoneNumber": "(02) 8922-9061",
+    "category": "transportation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": "Text LTOHELP to 2600",
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8922-9062",
+      "(02) 8922-9063"
+    ],
+    "region": "national",
+    "description": "Land transportation licensing and assistance",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ltfrb_transport",
+    "serviceName": "Land Transportation Franchising and Regulatory Board (LTFRB)",
+    "phoneNumber": "1342",
+    "category": "transportation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": "0921-448-7777",
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8426-2515",
+      "(02) 8426-2534"
+    ],
+    "region": "national",
+    "description": "Public transport assistance, complaints and emergency responses",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_nlex_expressway",
+    "serviceName": "North Luzon Expressway (NLEX)",
+    "phoneNumber": "1-35000",
+    "category": "transportation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8580-8900"
+    ],
+    "region": "Region III",
+    "description": "NLEX-SCTEX toll expressway accidents and emergencies",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_sctex_expressway",
+    "serviceName": "Subic-Clark-Tarlac Expressway (SCTEX)",
+    "phoneNumber": "1-35000",
+    "category": "transportation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [
+        {
+          "network": "Emergency",
+          "number": "0920-96-SCTEX (72839)"
+        }
+      ],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8362-2246",
+      "(02) 8362-9997"
+    ],
+    "region": "Region III",
+    "description": "SCTEX accidents and traffic emergencies",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_skyway_metro",
+    "serviceName": "Skyway System - Metro Manila",
+    "phoneNumber": "(02) 88-SKYWAY (7529929)",
+    "category": "transportation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 5318-TOLL (8655)"
+    ],
+    "region": "NCR",
+    "description": "Skyway toll expressway accidents and emergencies",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_slex_expressway",
+    "serviceName": "South Luzon Expressway (SLEX)",
+    "phoneNumber": "(02) 5318-8655",
+    "category": "transportation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [
+        {
+          "network": "Smart",
+          "number": "0999-886-0893"
+        },
+        {
+          "network": "Globe",
+          "number": "0917-539-8762"
+        },
+        {
+          "network": "Sun Cellular",
+          "number": "0932-854-6980"
+        }
+      ],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "region": "Region IV-A",
+    "description": "South Luzon Expressway accidents and emergencies",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_cavitex_expressway",
+    "serviceName": "CAVITEX - Cavite Expressway",
+    "phoneNumber": "(02) 165-8888",
+    "category": "transportation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8683-8001",
+      "(02) 8683-8002"
+    ],
+    "region": "NCR/Region IV-A",
+    "description": "CAVITEX toll expressway emergencies and assistance",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_star_tollway",
+    "serviceName": "Southern Tagalog Arterial Road (STAR Tollway)",
+    "phoneNumber": "(43) 756-7870",
+    "category": "transportation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(43) 757-2277"
+    ],
+    "region": "Region IV-A",
+    "description": "STAR tollway accidents and emergencies",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_pnr_rail",
+    "serviceName": "Philippine National Railways (PNR)",
+    "phoneNumber": "(02) 5319-0041",
+    "category": "transportation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 5319-0169"
+    ],
+    "region": "national",
+    "description": "Rail transport emergencies and assistance",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_lrta_line2",
+    "serviceName": "Light Rail Transit Authority (LRTA) - Line 2",
+    "phoneNumber": "(02) 8647-3479",
+    "category": "transportation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8647-3480",
+      "(02) 8647-3481",
+      "(02) 8647-3482",
+      "(02) 8647-3483",
+      "(02) 8647-3484",
+      "(02) 8647-3485",
+      "(02) 8647-3486",
+      "(02) 8647-3487",
+      "(02) 8647-3488",
+      "(02) 8647-3489",
+      "(02) 8647-3490",
+      "(02) 8647-3491",
+      "(02) 8647-3452"
+    ],
+    "extensions": {
+      "29846": "Local extension",
+      "29854": "Local extension"
+    },
+    "region": "NCR",
+    "description": "Light Rail Transit Line 2 emergencies and assistance",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_mrt3_dottr",
+    "serviceName": "Metro Rail Transit (MRT3) - DOTr",
+    "phoneNumber": "(02) 8929-5347",
+    "category": "transportation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "extensions": {
+      "2810": "Local extension"
+    },
+    "region": "NCR",
+    "description": "Metro Rail Transit MRT3 emergencies and assistance",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ots_security",
+    "serviceName": "Office for Transportation Security (OTS)",
+    "phoneNumber": "(02) 8853-5249",
+    "category": "transportation",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [
+        {
+          "network": "Mobile",
+          "number": "0919-9999-OTS (687)"
+        }
+      ],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "region": "national",
+    "description": "Transportation security and threat reporting",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_manila_traffic",
+    "serviceName": "Manila Traffic Hotline",
+    "phoneNumber": "(02) 8527-3087",
+    "category": "traffic",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8527-3088",
+      "(02) 8527-9860"
+    ],
+    "region": "NCR",
+    "description": "Manila traffic emergencies and road incidents",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_laspinas_traffic",
+    "serviceName": "Las Piñas Traffic Hotline",
+    "phoneNumber": "(02) 8856-3132",
+    "category": "traffic",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "region": "NCR",
+    "description": "Las Piñas traffic and road emergencies",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_mandaluyong_traffic",
+    "serviceName": "Mandaluyong Traffic Hotline",
+    "phoneNumber": "(02) 8532-5347",
+    "category": "traffic",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8532-5001"
+    ],
+    "extensions": {
+      "323": "Local extension",
+      "357": "Local extension"
+    },
+    "region": "NCR",
+    "description": "Mandaluyong traffic and road emergencies",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_marikina_rescue",
+    "serviceName": "Marikina Rescue Hotline",
+    "phoneNumber": "161",
+    "category": "rescue_services",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [
+        {
+          "network": "Smart",
+          "number": "0928-559-3341"
+        },
+        {
+          "network": "Globe",
+          "number": "0917-584-2168"
+        }
+      ],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8646-2436",
+      "(02) 8646-2437",
+      "(02) 8646-2438",
+      "(02) 8646-0427",
+      "(02) 7586-7344"
+    ],
+    "extensions": {
+      "tactical_operation_center": "(02) 8646-1631",
+      "mobile_toc": "0927-968-4311"
+    },
+    "region": "NCR",
+    "description": "Marikina rescue and emergency services",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_pasig_rescue",
+    "serviceName": "Pasig Emergency/Rescue Hotline",
+    "phoneNumber": "(02) 641-1907",
+    "category": "rescue_services",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": "0908-899-3333",
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8643-0000"
+    ],
+    "region": "NCR",
+    "description": "Pasig rescue and emergency services",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_makati_safety",
+    "serviceName": "Makati Public Safety Department (MAPSA) Hotline",
+    "phoneNumber": "(02) 8819-3270",
+    "category": "public_safety",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8844-3146"
+    ],
+    "region": "NCR",
+    "description": "Makati public safety and emergency services",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_manila_water_utility",
+    "serviceName": "Manila Water Company",
+    "phoneNumber": "1627",
+    "category": "utilities",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "region": "NCR",
+    "description": "Water service emergencies and complaints",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_maynilad_utility",
+    "serviceName": "Maynilad Water Services",
+    "phoneNumber": "1626",
+    "category": "utilities",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": "0998-864-1446",
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "region": "NCR",
+    "description": "Water service emergencies and complaints",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_ncmh_mental_health",
+    "serviceName": "National Center for Mental Health (NCMH) Crisis Hotline",
+    "phoneNumber": "989-USAP (8727)",
+    "category": "mental_health",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [
+        {
+          "network": "Mobile",
+          "number": "0917-899-USAP (8727)"
+        }
+      ],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8531-9001",
+      "(02) 8531-9002",
+      "(02) 8531-9003",
+      "(02) 8531-9004",
+      "(02) 8531-9005",
+      "(02) 8531-9006",
+      "(02) 8531-9007",
+      "(02) 8531-9008",
+      "(02) 8531-9009",
+      "(02) 8531-9010"
+    ],
+    "extensions": {
+      "201": "Local extension"
+    },
+    "region": "national",
+    "description": "Mental health crisis support and counseling",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_nbi_vawcd",
+    "serviceName": "NBI - Violence Against Women and Children Desk (VAWCD)",
+    "phoneNumber": "(02) 8523-8231",
+    "category": "protection_services",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8523-8232",
+      "(02) 8523-8233",
+      "(02) 8523-8234",
+      "(02) 8523-8235",
+      "(02) 8523-8236",
+      "(02) 8523-8237",
+      "(02) 8523-8238",
+      "(02) 8525-6028"
+    ],
+    "region": "national",
+    "description": "Violence against women and children investigations and support",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_pcw_women",
+    "serviceName": "Philippine Commission on Women (PCW)",
+    "phoneNumber": "(02) 8736-5249",
+    "category": "protection_services",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "additionalNumbers": [
+      "(02) 8736-7712",
+      "(02) 8736-4449"
+    ],
+    "region": "national",
+    "description": "Women's rights advocacy and support services",
+    "hours": "24/7",
+    "works_offline": false
+  },
+  {
+    "id": "hot_poison_control_national",
+    "serviceName": "Philippine Poison Control Center",
+    "phoneNumber": "(02) 8526-2233",
+    "category": "medical_emergency",
+    "alternativeContact": {
+      "smsNumber": null,
+      "mobileNumbers": [],
+      "textHotline": null,
+      "viber": null,
+      "whatsapp": null,
+      "email": null,
+      "radioFrequency": null
+    },
+    "region": "national",
+    "description": "Poison ingestion, overdose, toxic exposure, chemical accidents",
+    "hours": "24/7",
+    "works_offline": false
+  }
+]
